@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title>Voice Selfie App</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <style>
+      body {
+        background-color: #90e0ef;
+      }
+    #selfie_img {
+      border-radius: 60px;
+    }
+    #output {
+      width: 30%;
+    }
+    #start_button {
+      width: 5%;
+      height: 4%;
+    }
+    #webcam_output {
+      width: 300px;
+      height: 300px;
+      color: grey;
+      border: 2px solid black;
+    }
+    #header {
+        background-color: #0077b6;
+        padding : 10px;
+    }
+  </style>
+  <body>
+    <center>
+        <div id="header">      <h1>
+            Voice Selfie App
+            <img
+              src="selfie.jpg"
+              alt="Selfie Image"
+              width="150"
+              id="selfie_img"
+              height="150"
+            />
+          </h1></div>
+      <br />
+      <hr />
+      <h4 class="text-danger">
+        Please press allow as soon as the popup comes. After you give voice a
+        command
+      </h4>
+      <h3>Say "take my selfie"</h3>
+      <label>Your voice output : </label>
+      <br />
+      <textarea id="output" readonly="true"></textarea>
+      <br />
+      <br />
+      <button onclick="start()" class="btn btn-info" id="start_button">
+        Start
+      </button>
+      <br />
+      <br />
+      <label>Press the Start Button</label>
+      <br />
+      <label>Your Webcam : </label>
+      <br />
+      <div id="webcam_output"></div>
+      <br>
+      <br>
+      <label">Your Selfie Will Display Here : </label>
+      <div id="selfie_output"></div>
+    </center>
+    <script src="main.js"></script>
+  </body>
+</html>
